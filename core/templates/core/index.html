@@ -1,0 +1,37 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block css%}
+<!-- <link rel="stylesheet" href="{% static 'haa_core/css/index.css' %}"> -->
+
+<link rel="stylesheet" href="{% static 'lacolley_about/css/about.css' %}">
+
+<link rel="stylesheet" href="{% static 'lacolley_contact/css/contact.css' %}">
+<link rel="stylesheet" href="{% static 'lacolley_portfolio/css/portfolio.css' %}">
+
+{% endblock %}
+
+{% block content %}
+<section class="homeSec" id="homepage">
+    <h2> Demo Reel </h2>
+  
+    <div class="demoReel">
+      <iframe  src="https://www.youtube.com/embed/oVuqwdrvOh4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  
+  </section>
+  {% include "lacolley_portfolio/portfolio.html" %}
+
+  {% include "lacolley_about/about.html" %}
+  {% include "lacolley_contact/contact.html" %}
+
+{% endblock %}
+
+
+
+{% block script %}
+
+    <script src="{% static 'lacolley_portfolio/script/script_portfolio.js' %}"></script>
+
+{% endblock  %}
