@@ -19,11 +19,13 @@ from django.urls import path
 
 
 from . import views
-from core.views import IndexView
+from .views import VFXWorkList
 
 
 urlpatterns = [
-    path('', IndexView.as_view(), name='portfolio'),
+    path('', VFXWorkList.as_view(), name='portfolio'),
+    # path('', IndexView.as_view(), name='portfolio'),
+
 
 
     

@@ -23,7 +23,7 @@ urlpatterns = [
 
     path('', include('lacolley_about.urls')),
     path('', include('lacolley_contact.urls')),
-    path('', include('lacolley_portfolio.urls')),
+    path('portfolio', include('lacolley_portfolio.urls')),
 
 
 ]

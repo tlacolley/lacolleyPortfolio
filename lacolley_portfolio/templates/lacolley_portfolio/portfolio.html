@@ -1,5 +1,20 @@
 
+
+{% extends 'core/base.html' %}
+
 {% load static %}
+
+{% block css%}
+<!-- <link rel="stylesheet" href="{% static 'haa_core/css/index.css' %}"> -->
+
+<link rel="stylesheet" href="{% static 'lacolley_about/css/about.css' %}">
+
+<link rel="stylesheet" href="{% static 'lacolley_contact/css/contact.css' %}">
+<link rel="stylesheet" href="{% static 'lacolley_portfolio/css/portfolio.css' %}">
+
+{% endblock %}
+
+{% block content %}
 
 
 <section class="portfolioSec" id="portfoliopag">
@@ -27,16 +42,43 @@
                  <div class="panelVfx-body">
                     <div class="tab-content">
                         <div class="tab-pane fade in active show" id="compTab">
-                            <h3>Compositing</h3>
+                            <h3>Compositing</h3>   
+                            <div class="row">
+
+                            
+                            {% for comp in compositing %}
+                            <div class="col-6">
+                                <h4>{{ comp.name }}</h4>
+                                <!-- <img src="{%static '{{ comp.img }}' %}" alt=""> -->
+                                <iframe  src="{{ comp.vieo_link }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <h4>{{ comp.description }}</h4>
+                                
+                                <iframe src="https://player.vimeo.com/video/189659935" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+                                
+                            </div>
+                            {% endfor %}
                         </div>
                         <div class="tab-pane fade in" id="matteTab">
                             <h3>Matte Painting</h3>
+                              {% for matte in matte %}
+                                <h4>{{ matte.name }}</h4>
+                                
+                            {% endfor %}
                         </div>
                         <div class="tab-pane fade in" id="greenScreenTab">
                             <h3>Green Screen</h3>
+                              {% for track in tracking %}
+                                <h2>{{ track.name }}</h2>
+                                
+                            {% endfor %}
                         </div>
                         <div class="tab-pane fade in" id="othersTab">
                             <h3>Others</h3>
+                              {% for other in others %}
+                                <h2>{{ other.name }}</h2>
+                                
+                            {% endfor %}
                         </div>
                     </div>
                  </div>
@@ -55,3 +97,12 @@
 
 
 
+{% endblock %}
+
+
+
+{% block script %}
+
+    <script src="{% static 'lacolley_portfolio/script/script_portfolio.js' %}"></script>
+
+{% endblock  %}
