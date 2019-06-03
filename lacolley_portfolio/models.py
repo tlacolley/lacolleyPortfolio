@@ -17,7 +17,7 @@ class VFXWork(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
     img = models.ImageField(upload_to = 'images/vfx')
-    video_link = models.URLField(max_length=200,null=True)
+    video_code = models.CharField(max_length=200,null=True)
     CAT_CHOICE = [
     ('comp', 'Compositing'),
     ('mat', 'Matte Painting'),

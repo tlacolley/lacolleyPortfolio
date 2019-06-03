@@ -21,6 +21,7 @@ class VFXWorkList(ListView):
         context = super().get_context_data(**kwargs)
         context['compositing'] = VFXWork.objects.all().filter(category='comp')
         print(context['compositing'])
+
         context['matte'] = VFXWork.objects.all().filter(category='mat')
         context['tracking'] = VFXWork.objects.all().filter(category='trk')
         context['other'] = VFXWork.objects.all().filter(category='oth')

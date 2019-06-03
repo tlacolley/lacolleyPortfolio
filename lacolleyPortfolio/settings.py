@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'contact_form',
+    'widget_tweaks',
     'core',
     'lacolley_about',
     'lacolley_contact',
@@ -68,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'lacolley_contact.context_processors.contact_processor',
             ],
         },
     },
@@ -124,3 +127,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+from lacolleyPortfolio.extra_setting import *
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True  
+EMAIL_USE_SSL = False  
+EMAIL_HOST = 'smtp.sendgrid.net'  
+EMAIL_PORT = 587  
+EMAIL_HOST_USER = 'apikey'  # this is SendGrid username don't change it
+EMAIL_HOST_PASSWORD = api_key 
+
+ADMINS = (
+    ('tlacolley', 'thomaslacolley@gmail.com'),   # email will be sent to your_email
+)
+
+MANAGERS = ADMINS

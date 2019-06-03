@@ -1,5 +1,5 @@
 
-{% load static %}
+{% load static  widget_tweaks%}
 
 
 <section class="contactSec mb-5" id="contactpage">
@@ -30,18 +30,87 @@
       <div class="contactForm">
 
         <h3>Keep in touch</h3>
-        <form>
-          <input type="text" name="inputName" placeholder="Your Name">
-          <input type="mail" name="inputMail" placeholder="Your Mail">
-          <input type="text" name="inputSubject" placeholder="Your Subject">
-          <textarea name="inputMessage" placeholder="Your Message" rows="5"></textarea>
-          <input type="submit" name="btnSubmit" id="btnSubmit">
-
+        <!-- <form method="post" action="{% url 'contact_form' %}"> -->
+            <!-- <input type="text" name="inputName" placeholder="Your Name">
+            <input type="mail" name="inputMail" placeholder="Your Mail">
+            <input type="text" name="inputSubject" placeholder="Your Subject">
+            <textarea name="inputMessage" placeholder="Your Message" rows="5"></textarea> -->
+            <!-- <input type="submit" name="btnSubmit" id="btnSubmit"> -->
+          <!-- </form> -->
+          
+          <form id="contact-form" method="post" action="{% url 'contact_form' %}" >{% csrf_token %}
+              {% render_field contact_form.name  placeholder=contact_form.name.label %}
+              {% render_field contact_form.email  placeholder=contact_form.email.label %}
+              
+              {% render_field contact_form.body  placeholder=contact_form.body.label %}
+              <button id="btnSubmit"type="submit" class="rounded-pill"> Submit </button>
+      
         </form>
+
+
       </div>
   </section>
 
 
 </section>
 
+
+<script>
+
+$(function(){
+  var container_form = $('.contactForm')
+  var contact_form = $('#contact-form')
+  // console.log("pkl"); // Valid
+  // {% url 'contact_form' %}
+
+  contact_form.on('submit', function(event){
+    event.preventDefault();
+
+
+    
+    $.ajax({
+        url : $(this).attr('action'),
+        type : "POST", // http method
+        data : $(this).serialize(), 
+
+        // handle a successful response
+        success : function(json) {
+          var data = `
+          
+            <h3 class="text-center text-white py-5 my-5 ">Your message was sent. </h3>
+            <img class="w-75" src="{% static 'lacolley_contact/img/thank-you-fallout.png' %}" alt="">
+           
+          `
+          // container_form.fadeOut(100);
+          // container_form.html(data);
+          // container_form.fadeIn(500);
+
+
+          jQuery(container_form).fadeOut( 500 , function() {
+            jQuery(this).html( data);
+        }).fadeIn( 2000 );
+
+
+
+        },
+
+        // handle a non-successful response
+        error : function(xhr,errmsg,err) {
+            $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
+                " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
+            console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+        }
+    });
+   
+});
+
+
+
+
+
+
+})
+
+
+</script>
 

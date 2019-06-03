@@ -11,7 +11,7 @@ admin.site.register(WebWork, WebWorkAdmin)
 
 
 class VFXWorkAdmin(admin.ModelAdmin):
-    fields = ('name', 'description', 'category', 'img', 'video_link')
+    fields = ('name', 'description', 'category', 'img', 'video_code')
     list_display = ('first_name', 'last_name')
     list_display = ('name', 'category', 'description')
 admin.site.register(VFXWork, VFXWorkAdmin)

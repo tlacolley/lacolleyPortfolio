@@ -49,22 +49,29 @@
                             {% for comp in compositing %}
                             <div class="col-6">
                                 <h4>{{ comp.name }}</h4>
+                                <!-- {{comp.img}} -->
                                 <!-- <img src="{%static '{{ comp.img }}' %}" alt=""> -->
-                                <iframe  src="{{ comp.vieo_link }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <h4>{{ comp.description }}</h4>
+                                <iframe src="https://player.vimeo.com/video/{{comp.video_code}}" width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                                 
-                                <iframe src="https://player.vimeo.com/video/189659935" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-                                
+                                <!-- {{comp.img}} -->
+                                <!-- <p>{{ comp.description }}</p> -->
+                            
                             </div>
                             {% endfor %}
                         </div>
+                    </div>
                         <div class="tab-pane fade in" id="matteTab">
                             <h3>Matte Painting</h3>
+                            <div class="row">
+
                               {% for matte in matte %}
-                                <h4>{{ matte.name }}</h4>
+                              <div class="col-6">
+                                    <h4>{{ matte.name }}</h4>
+                                    <iframe src="https://player.vimeo.com/video/{{matte.video_code}}" width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                </div>
                                 
                             {% endfor %}
+                            </div>
                         </div>
                         <div class="tab-pane fade in" id="greenScreenTab">
                             <h3>Green Screen</h3>
@@ -86,7 +93,11 @@
     </div>
     <!-- END  Panel VFX ----------------------------------->
 
-    <div class="tab-pane fade" id="webTab">Web Works !!!!!</div>
+    <div class="tab-pane fade" id="webTab">
+        <h3> Web Project </h3>
+        
+
+    </div>
 
   </div>
 </div>

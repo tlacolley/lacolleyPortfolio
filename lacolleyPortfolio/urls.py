@@ -22,6 +22,9 @@ urlpatterns = [
     path('', include('core.urls')),
 
     path('', include('lacolley_about.urls')),
+    # contact form 
+    path('contact/', include('contact_form.urls')),
+
     path('', include('lacolley_contact.urls')),
     path('portfolio', include('lacolley_portfolio.urls')),
 

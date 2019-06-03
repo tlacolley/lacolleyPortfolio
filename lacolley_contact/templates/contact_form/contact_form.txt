@@ -1,0 +1,8 @@
+From: {{ name }} 
+
+Email: {{ email }}
+
+Message: 
+
+{{ body }}
+
