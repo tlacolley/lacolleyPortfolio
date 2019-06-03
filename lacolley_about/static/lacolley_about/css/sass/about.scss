@@ -1,6 +1,7 @@
 
 
-@import "../../../../core/static/lacolley_core/css/sass/variables-site/_variables-site.scss";
+@import "../../../../../core/static/lacolley_core/css/sass/variables-site/_variables-site.scss";
+
 
 .aboutSec{
     display:grid;
@@ -21,6 +22,9 @@
       padding: 1% 2%;
       .description{
         padding:5%;
+      }
+      pre{
+        color: green;
       }
   
       // .bottom-line-description, .left-line-description{
@@ -74,12 +78,30 @@
       }
   
     }
-    .about-skills{
+    .about-web{
       grid-column: 1/4;
+      position: relative;
       h4{
       margin: 5% 0;
   
         text-align: center;
+      }
+      &::after{
+        content:"";
+        position:absolute;
+        @include boxShadowGlow(2px,$primaryColor);
+        width: 0;
+        height: 120%;
+        top: 5%;
+      }
+      &::before{
+        content:"";
+        position:absolute;
+        @include boxShadowGlow(2px,$primaryColor);
+        width: 69%;
+        height: 0;
+        top: 5%;
+
       }
   
     }
@@ -131,7 +153,7 @@
     padding: 15%;
   
   }
-  .about-skills, .about-vfx{
+  .about-web, .about-vfx{
     display:grid;
     grid-template-columns: repeat(2, 1fr);
     h4{
@@ -151,7 +173,7 @@
         height:100%;
       }
     }
-    .separator-skills{
+    .separator-web{
       position: absolute;
       width: 0;
       height: 90%;
@@ -163,7 +185,7 @@
     }
   }
   
-  .list-skills{
+  .list-web{
     list-style:none;
   }
   
