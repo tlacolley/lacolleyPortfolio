@@ -205,3 +205,73 @@
   
   
   }
+
+
+
+  @media screen and (max-width:500px) {
+  
+    .aboutSec{
+      display: block;
+      .about-description::before{
+        width: 100%;
+
+      }
+      .about-description{
+        &::before{
+          bottom: 0%;
+        } 
+        margin: 0;
+        padding: 0;
+        h4{
+          text-align: center;
+        }
+        &::after{
+          height: 85%;
+        }
+      }
+      .about-cv{
+        text-align: center;
+        padding: 0;
+        ul{
+          list-style: none;
+          padding: 0;
+        }
+      }
+      .about-vfx{
+          display: block;
+          ul{
+            padding: 0;
+            li img{
+              width: 75%;
+              // height: 100%;
+              margin-right: 5%;
+            }
+          }
+        }
+
+        .about-web{
+          display: flex;
+          flex-direction: column;
+          &:before{
+            top:0%;
+          }
+          &:after{
+            height: 100%;
+            top: 0%;
+          }
+          .list-web{
+            padding: 0;
+            li {
+              flex-direction: column;
+              display: flex;
+              text-align: center;
+              margin-top: 5%;
+              
+            }
+        }
+
+        } 
+
+    }
+  
+  }

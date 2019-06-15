@@ -147,3 +147,26 @@
   
   
   
+  @media screen and (max-width:500px) {
+    .contactSec{
+
+      .contact-info{
+        display: block;
+        
+        .cardInfo .adresseList :nth-child(2){
+            font-size: 1.2rem;
+          }
+       
+        .cardSocial{
+          
+          margin: 10% 0 0 0;
+        }
+        .contactForm form input,  .contactForm form textarea {
+          width: 100%;
+        }
+      }
+      
+    }
+
+
+  }

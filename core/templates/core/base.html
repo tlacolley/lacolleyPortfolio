@@ -19,8 +19,11 @@
         {% endblock %}
     </head>
     <body>
-        
-       
+        <!-- Pre-Loading  Page -->
+
+        {% include "core/pre-loading.html" %}
+
+       <!-- End Pre-Loading Page -->
         {% include "core/header.html" %}
         <div class="container">
             <main id="main" class="mainSection">
@@ -44,6 +47,9 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js"></script>
+
+
+        <script src="{% static 'lacolley_core/script/script_pre-loading.js' %}"></script>
 
         <script src="{% static 'lacolley_core/script/script_navbar.js' %}"></script>
         <script src="{% static 'lacolley_core/script/script_header.js' %}"></script>

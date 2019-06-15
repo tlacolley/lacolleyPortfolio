@@ -23,27 +23,44 @@
                 a{
                     display: flex;
                     justify-content: center;
-                    line-height: 385%;
+                    line-height: 325%;
                     position:relative;
-                    color:black;
+                    // color:black;
                     text-align:center;
                     text-decoration:none;
                     text-transform:uppercase;
                     height:3rem;
                     // line-height:90px;
                     // background:linear-gradient(165deg,transparent 29%, #98927C 30%);
-                    background: linear-gradient(to bottom, #ECECEC 50%, #D1D1D1 100%);
-                    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
+                    // background: linear-gradient(to bottom, #ECECEC 50%, #D1D1D1 100%);
+                    // box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
                     border-top-left-radius: 25px;
                     border-top-right-radius: 25px;
+
+
+                    text-shadow: 0px 0px 7px #00d6fc;
+                    color: white;
+                    box-shadow: 0px 0px 5px 0px #004bea, inset 0 0 40px #004bea;
+                    border: 2px solid #004bea;
+                    background: black;
+
                     &:hover{
-                        background: #F2EEE2;
-                        color:#98927C;
+                        // background: #F2EEE2;
+                        // color:#98927C;
+                        text-shadow: 0px 0px 7px #00d6fc;
+                        background: transparent;
                     }
                 }
             }
             .active a{
-                background:grey;
+               
+                // color: blueviolet;
+                box-shadow: 0px 0px 5px 0px #004bea, inset 0 0 40px #004bea;
+                border: 2px solid #004bea;
+                background: rgb(196, 196, 196);
+
+
+              
             }
              li:nth-child(1) a{
                 }
@@ -76,7 +93,7 @@
                 li{
                     width:3%;
                     height: 25%;
-                    background: linear-gradient(to bottom, #ECECEC 50%, #D1D1D1 100%);
+                    // background: linear-gradient(to bottom, #ECECEC 50%, #D1D1D1 100%);
                     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
                     writing-mode: sideways-lr;
                     border-top-left-radius: 25px;
@@ -90,16 +107,29 @@
                     a{
                         display:block;
                         width:100%;
-                        color:black;
+
+                        text-shadow: 0px 0px 7px #00d6fc;
+                        color: white;
+                        
                        
                         &:hover{
                             border-top-left-radius: 25px;
                             border-bottom-left-radius: 25px;
                             box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
-
-                            background: #F2EEE2;
-                            color:#98927C;
+                            text-decoration: none;
+                            box-shadow: 0px 0px 20px 1px #004bea, inset 0 0 20px #004bea;
+                            // background: #F2EEE2;
+                            // color:#98927C;
+                            text-shadow: 0px 0px 7px #00d6fc;
+                            background: transparent;
                         }
+                    }
+                    .active{
+                        background: rgb(196, 196, 196);
+                        border-top-left-radius: 25px;
+                        border-bottom-left-radius: 25px;
+                        box-shadow: 0px 0px 20px 1px #004bea, inset 0 0 20px #004bea;
+
                     }
                 }
             }
@@ -119,3 +149,28 @@
     transition: $prop $time cubic-bezier(.11, .65, .04, 1);;
 }
 
+@media screen and (max-width:500px) {
+
+    .portfolioSec {
+
+        .container-portfolio {
+            .panel-body {
+                height: 100%;
+                h4{
+                    font-size: 1rem;
+                }
+                iframe{
+                    width: 80%;
+                }
+            }
+        }
+    
+    
+
+
+
+    }
+
+
+
+}

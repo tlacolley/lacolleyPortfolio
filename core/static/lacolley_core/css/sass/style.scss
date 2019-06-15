@@ -13,6 +13,7 @@
 // @import "variables-site/variables-site";
 // @import "mixins/mixins-master";
 
+@import "pre-loading";
 
 @import "variables-site/colors";
 
@@ -68,7 +69,7 @@
   }
 
 
-html,body,{
+html,body{
 	height:100%;
   }
   body{
@@ -81,4 +82,8 @@ html,body,{
   
 	}
   }
-  
+	
+	a{
+		outline: 0;
+	}
+

@@ -128,4 +128,47 @@
     .aboutSec .list-web li {
       font-size: 1.3rem; }
 
+@media screen and (max-width: 500px) {
+  .aboutSec {
+    display: block; }
+    .aboutSec .about-description::before {
+      width: 100%; }
+    .aboutSec .about-description {
+      margin: 0;
+      padding: 0; }
+      .aboutSec .about-description::before {
+        bottom: 0%; }
+      .aboutSec .about-description h4 {
+        text-align: center; }
+      .aboutSec .about-description::after {
+        height: 85%; }
+    .aboutSec .about-cv {
+      text-align: center;
+      padding: 0; }
+      .aboutSec .about-cv ul {
+        list-style: none;
+        padding: 0; }
+    .aboutSec .about-vfx {
+      display: block; }
+      .aboutSec .about-vfx ul {
+        padding: 0; }
+        .aboutSec .about-vfx ul li img {
+          width: 75%;
+          margin-right: 5%; }
+    .aboutSec .about-web {
+      display: flex;
+      flex-direction: column; }
+      .aboutSec .about-web:before {
+        top: 0%; }
+      .aboutSec .about-web:after {
+        height: 100%;
+        top: 0%; }
+      .aboutSec .about-web .list-web {
+        padding: 0; }
+        .aboutSec .about-web .list-web li {
+          flex-direction: column;
+          display: flex;
+          text-align: center;
+          margin-top: 5%; } }
+
 /*# sourceMappingURL=about.css.map */

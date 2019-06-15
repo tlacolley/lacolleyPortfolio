@@ -15,7 +15,7 @@ header{
     }
     .leitmotiv{
       font-size: 2rem;
-      top: 12%;
+      top: 12%; left: 3%;
     }
 
     img{
@@ -64,7 +64,15 @@ header{
       animation: hideList,0.5s forwards;
     }
     .opacityOn{
-      animation: showList,0.5s forwards;
+      animation: showList,0.5s forwards;@media only screen and (min-device-width : 360px) and (max-device-width : 740px){
+
+
+
+
+
+
+    
+      }
     }
     .nav-link-icon{
       display:none;
@@ -182,6 +190,14 @@ header {
 }
 @media screen and (max-width:500px) {
 header {
+  h1{
+    font-size: 2rem;
+    display: none;
+  }
+  .leitmotiv{
+    font-size: 1rem;
+    top:5%;
+  }
   .navbar{
       ul{
         display:flex;
