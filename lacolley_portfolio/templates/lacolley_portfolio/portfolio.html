@@ -37,20 +37,13 @@
 
                             
                             {% for comp in compositing %}
-                            <div class="col-12 col-sm-6">
-                                <h4>{{ comp.name }}</h4>
-                                <!-- {{comp.img}} -->
-                                <!-- <img src="{%static '{{ comp.img }}' %}" alt=""> -->
-                                <div class="d-flex "> 
+               
 
-                                    <!-- <p>{{comp.description}}</p> -->
+                            <div class="col-12 col-sm-6">
+                                    <h4>{{ comp.name }}</h4>
                                     <iframe src="https://player.vimeo.com/video/{{comp.video_code}}" width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                                 </div>
                                 
-                                <!-- {{comp.img}} -->
-                                <!-- <p>{{ comp.description }}</p> -->
-                            
-                            </div>
                             {% endfor %}
                         </div>
                     </div>
@@ -102,12 +95,12 @@
         {% for web in website %}
         <div class="row pt-4">
 
-            <div class="col-6">
+            <div class="col-12 col-sm-6">
                     <a href="{{web.link}}" target="_blank"><h3>{{ web.name}}</h3></a>
-                <pre class="px-5 pt-2 text-white">{{ web.description}}</pre>
+                <p class="px-5 pt-2 text-white">{{ web.description}}</p>
                 
             </div>
-            <div class="col-6">
+            <div class="col-12 col-sm-6 py-4">
                 <a href="{{web.link}}" target="_blank"><img class="img-fluid w-75" src="{{web.img.url}}" alt="{{web.name}}"></a>
                 
             </div>

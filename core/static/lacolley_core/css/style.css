@@ -84,7 +84,6 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 400px;
   height: 400px;
   transform-style: preserve-3d;
   margin: auto; }
@@ -98,8 +97,7 @@ body {
   position: absolute;
   left: 50%;
   margin-left: -100px;
-  top: 50%;
-  margin-top: -100px; }
+  top: 50%; }
 
 .hex-brick {
   background: #ABF8FF;

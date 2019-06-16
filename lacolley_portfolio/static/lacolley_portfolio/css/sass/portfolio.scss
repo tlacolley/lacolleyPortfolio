@@ -154,6 +154,7 @@
     .portfolioSec {
 
         .container-portfolio {
+            margin-left: 5%;
             .panel-body {
                 height: 100%;
                 h4{
@@ -161,6 +162,16 @@
                 }
                 iframe{
                     width: 80%;
+                }
+            }
+            #vfxTab{
+                .panelVfx-heading{
+                    ul{
+                        right: 14%;
+                        li{
+                            width: 14%;
+                        }
+                    }
                 }
             }
         }

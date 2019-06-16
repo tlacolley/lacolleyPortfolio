@@ -93,11 +93,17 @@
               box-shadow: 0px 0px 20px 1px #004bea, inset 0 0 20px #004bea; }
 
 @media screen and (max-width: 500px) {
-  .portfolioSec .container-portfolio .panel-body {
-    height: 100%; }
-    .portfolioSec .container-portfolio .panel-body h4 {
-      font-size: 1rem; }
-    .portfolioSec .container-portfolio .panel-body iframe {
-      width: 80%; } }
+  .portfolioSec .container-portfolio {
+    margin-left: 5%; }
+    .portfolioSec .container-portfolio .panel-body {
+      height: 100%; }
+      .portfolioSec .container-portfolio .panel-body h4 {
+        font-size: 1rem; }
+      .portfolioSec .container-portfolio .panel-body iframe {
+        width: 80%; }
+    .portfolioSec .container-portfolio #vfxTab .panelVfx-heading ul {
+      right: 14%; }
+      .portfolioSec .container-portfolio #vfxTab .panelVfx-heading ul li {
+        width: 14%; } }
 
 /*# sourceMappingURL=portfolio.css.map */
