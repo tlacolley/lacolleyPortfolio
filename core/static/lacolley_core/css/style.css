@@ -677,6 +677,7 @@ header {
 footer {
   background-color: black;
   margin: 0;
+  margin-left: 5rem;
   padding: 5%; }
   footer p {
     margin: 0;

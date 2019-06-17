@@ -125,9 +125,16 @@
       margin: 3%;
       text-shadow: 0px 0px 10px #00d6fc;
       vertical-align: middle; }
+      .aboutSec .list-web .icon-web:hover {
+        animation: spinning 0.5s ease-in-out; }
     .aboutSec .list-web li {
       font-size: 1.3rem; }
 
+@keyframes spinning {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 @media screen and (max-width: 500px) {
   .aboutSec {
     display: block; }
