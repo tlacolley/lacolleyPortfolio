@@ -94,6 +94,10 @@ header{
       padding:$padding;
       background-color: $secondaryColor;
       color:$primaryTextColor;
+      
+      box-shadow: 0px 5px 10px 0px #004bea;
+      border-radius: 10px;
+      border-bottom: 2px solid #004bea;
       a{
         color:$primaryTextColor;
       }

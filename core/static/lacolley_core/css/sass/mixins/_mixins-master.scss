@@ -27,3 +27,14 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+
+
+@mixin borderLight() {
+	box-shadow: 0px 0px 20px 1px #004bea, inset 0 0 20px #004bea;
+	border-radius: 10px;
+	border: 2px solid #004bea;
+  }
+
+  .box { @include borderLight(); }
+  

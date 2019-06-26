@@ -19,6 +19,23 @@ function changeMainRight(){
   main.animate({marginRight:"5%"},1000)
   main.toggleClass("mainSection");
   main.toggleClass("mainSectionLeft");
+  // console.log("Animation for change to right");
+  
+}
+
+// Display icon one by one
+function displayEachIcon(){
+var time = 0;
+iconList.each(function(){
+  time += 250;
+  var icon = $(this);
+  setTimeout(function(){
+    icon.addClass("iconlistAnim");
+    icon.show()
+    console.log("Animation Display Icon");
+  },time);
+});
+console.log("Animation Display Icon END");
 }
 
 // Change list element by icon
@@ -28,25 +45,18 @@ function addClassUl(){
   displayEachIcon();
   listNav.animate({opacity:1},700);
   titleNav.animate({opacity:1},700);
+  // console.log("Animation Change the List to Icons");
+
+
 };
     
-  // Display icon one by one
-function displayEachIcon(){
-  var time = 0;
-  iconList.each(function(){
-    time += 250;
-    var icon = $(this);
-    setTimeout(function(){
-      icon.addClass("iconlistAnim");
-      icon.show()
-    },time);
-  });
-}
 
 // Function for hide the icon list 
 function animHideList(){
   titleNav.animate({opacity:0},400);
   listNav.animate({opacity:0},400);
+  // console.log("Animation hide the Icons");
+
 };
 
 // Function for show, display the icon list 
@@ -55,6 +65,8 @@ function displayList(){
   iconList.hide();
   listNav.animate({opacity:1},700);
   titleNav.animate({opacity:1},700);
+  console.log("Animation Display List");
+
 }
 
 //  Function to move the main to the center
@@ -62,6 +74,7 @@ function changeMainCenter(){
   main.toggleClass("mainSection");
   main.toggleClass("mainSectionLeft");
   main.animate({marginRight:"10%"},1000);
+
 }
 
 //  FUnction to change the Navbar position 
@@ -75,6 +88,8 @@ function changeClassNavbar(){
   listNav.addClass("ulTop");
   // Function display List ----
   setTimeout(displayList,1500);
+  // console.log("Animation Toggle Left to Top ");
+
 
 }
 
@@ -93,6 +108,8 @@ function animTopFixed(){
     //  Change list by Icons ------
     setTimeout(addClassUl,1900)
     listNav.removeClass("ulTop");
+    // console.log("Animation Toggle Top to Left ");
+
  } 
 }
 
@@ -109,21 +126,26 @@ function navbarScript(){
   // Code Animation Navbar--------------------------------------------------------
       var isFixed=false;
       $(document).scroll(function () {
+          // console.log("Scroll begin");
+
           var topDist = $("header").height()-160;
           // Set fixed
           if( $(window).scrollTop()>=topDist && !isFixed ){
             isFixed=true;
             setTimeout(animTopFixed,0);
+            // console.log("Check Scroll good size");
+
             
         }
           // Set static
           if( $(window).scrollTop()<topDist && isFixed ){
             isFixed=false;
             if(navBar.hasClass("navbarLeft") ){
+              // console.log("Check Navbar have class left ");
 
               // Hide list Icon --------------
-              listNav.animate({opacity:0},500);
-              titleNav.animate({opacity:0},500);  
+              listNav.animate({opacity:0},500).queue("fx");
+              titleNav.animate({opacity:0},500).queue("fx");  
 
               // Change Nav position ---------
               setTimeout(changeClassNavbar,500);
@@ -140,12 +162,15 @@ function navbarScript(){
           // Set fixed
           if( $(window).scrollTop()>=topDist && !isFixed ){
             isFixed=true;
-            navBar.addClass("fixedNavbar");
+            navBar.addClass("fixedNavbar").queue("fx");
+            // console.log("Add class Fixed top ");
+
             }
           // Set static
           if( $(window).scrollTop()<topDist && isFixed ){
             isFixed=false;
-            navBar.removeClass("fixedNavbar");
+            navBar.removeClass("fixedNavbar").queue("fx");
+            // console.log("Remove class Fixed top ");
 
 
           }
