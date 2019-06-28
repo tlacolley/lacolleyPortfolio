@@ -5,7 +5,7 @@
   .aboutSec h2 {
     grid-column: 1/4; }
   .aboutSec section {
-    text-align: justify;
+    text-align: left;
     margin-bottom: 2%; }
   .aboutSec .about-description {
     position: relative;

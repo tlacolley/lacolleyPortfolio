@@ -17,6 +17,9 @@ header{
       font-size: 2rem;
       top: 12%; left: 3%;
     }
+    .swiper-background-header{
+      overflow: hidden;
+    }
 
     img{
 
@@ -26,16 +29,6 @@ header{
 
     #titleNav{
       margin-right: 2%;
-    }
-    h2{
-
-      a:hover{
-
-      // text-decoration:none;
-      // text-shadow:  0px 0px 10px rgba(0,214,252,1);
-      // color:white;
-      }
-
     }
 
     //  Class for animation Navbar
@@ -66,12 +59,6 @@ header{
     .opacityOn{
       animation: showList,0.5s forwards;@media only screen and (min-device-width : 360px) and (max-device-width : 740px){
 
-
-
-
-
-
-    
       }
     }
     .nav-link-icon{

@@ -3,16 +3,19 @@
 
 
 var topSwiper = new Swiper('.swiper-background-header', {
-    spaceBetween: 30,
+    // spaceBetween: 30,
     centeredSlides: true,
     effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
     autoplayDisableOnInteraction: true,
     speed: 2500,
-    loop:true,
+    // loop:true,
     slidesPerView: 1,
     autoplay: {
       delay: 2500,
-      disableOnInteraction: false,
+      // disableOnInteraction: false, 
     },
   
   });

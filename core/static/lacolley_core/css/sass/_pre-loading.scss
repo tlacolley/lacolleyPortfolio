@@ -38,7 +38,13 @@ body{
         height: 100vh;
         margin: 0;
         z-index: 1001;
-
+        .title-loading{
+            color: white;
+            margin-top: 9rem;
+            text-align: center;
+            font-size: 4rem;
+            text-shadow: 0px 0px 7px #00d6fc;
+        }
 
     }
     // Backhround Section Right and Left 
@@ -513,4 +519,23 @@ left: 50%;
         100%{
             background: #ABF8FF;
         }
+    }
+
+
+
+        
+    @media screen and (max-width:500px) {
+            // Container Circle 
+        #loader-wrapper {
+            #loader {
+                .title-loading{
+                    margin-top: 1rem;
+                }
+                .socket{
+                    top:25%;
+                }
+                
+            }
+        }
+        
     }
