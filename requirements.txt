@@ -1,3 +1,4 @@
 Django  
 django-contact-form 
 django-widget-tweaks
+Pillow
