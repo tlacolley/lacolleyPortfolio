@@ -72,12 +72,16 @@
             border-bottom-left-radius: 25px;
             box-shadow: 0px 0px 20px 1px #004bea, inset 0 0 20px #004bea;
             border: 2px solid #004bea;
-            border-right: none; }
+            border-right: none;
+            writing-mode: vertical-lr; }
             .portfolioSec .container-portfolio #vfxTab .panelVfx-heading ul li a {
               display: block;
               width: 100%;
               text-shadow: 0px 0px 7px #00d6fc;
-              color: white; }
+              color: white;
+              writing-mode: vertical-rl;
+              transform: rotate(180deg);
+              height: 100%; }
               .portfolioSec .container-portfolio #vfxTab .panelVfx-heading ul li a:hover {
                 border-top-left-radius: 25px;
                 border-bottom-left-radius: 25px;
@@ -88,9 +92,12 @@
                 background: transparent; }
             .portfolioSec .container-portfolio #vfxTab .panelVfx-heading ul li .active {
               background: #c4c4c4;
-              border-top-left-radius: 25px;
-              border-bottom-left-radius: 25px;
-              box-shadow: 0px 0px 20px 1px #004bea, inset 0 0 20px #004bea; }
+              border-top-right-radius: 25px;
+              border-bottom-right-radius: 25px;
+              box-shadow: 0px 0px 20px 1px #004bea, inset 0 0 20px #004bea;
+              writing-mode: vertical-rl;
+              transform: rotate(180deg);
+              height: 100%; }
 
 @media screen and (max-width: 500px) {
   .portfolioSec .container-portfolio {
